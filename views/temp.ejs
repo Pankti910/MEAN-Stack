@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        <%=universityname%>
+    </title>
+
+    <style>
+        body {
+            background-color: #F6F6F6;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0;
+            padding: 0;
+        }
+
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .brand-section {
+            background-color: #226EAD;
+            padding: 10px 40px;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .col-6 {
+            width: 50%;
+            flex: 0 0 auto;
+        }
+
+        .text-white {
+            color: #fff;
+        }
+
+        .company-details {
+            float: right;
+            text-align: right;
+        }
+
+        .body-section {
+            padding: 16px;
+            border: 1px solid gray;
+        }
+
+        .heading {
+            font-size: 20px;
+            margin-bottom: 08px;
+
+        }
+
+        .sub-heading {
+            color: #262626;
+            margin-bottom: 05px;
+        }
+
+        table {
+            background-color: #fff;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table thead tr {
+            border: 1px solid #111;
+            background-color: #f2f2f2;
+        }
+
+        table td {
+            vertical-align: middle !important;
+            text-align: center;
+        }
+
+        table th,
+        table td {
+            padding-top: 08px;
+            padding-bottom: 08px;
+        }
+
+        .table-bordered {
+            box-shadow: 0px 0px 5px 0.5px gray;
+        }
+
+        .table-bordered td,
+        .table-bordered th {
+            border: 1px solid #dee2e6;
+        }
+
+        .text-right {
+            text-align: end;
+        }
+
+        .w-20 {
+            width: 20%;
+        }
+
+        .float-right {
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="brand-section">
+            <div class="row">
+                <div class="col-6">
+                    <img src="logo.png">
+                    <h1 class="text-white">
+                        <%=universityname%>
+                    </h1>
+                </div>
+                <div class="col-6">
+                    <div class="company-details">
+                        <p class="text-white">
+                            <%=address1%>
+                        </p>
+                        <p class="text-white">
+                            <%=adress2%>
+                        </p>
+                        <p class="text-white">
+                            <%=cellno%>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="body-section">
+            <div class="row">
+                <div class="col-6">
+                    <h2 class="heading">Roll No.: <%=rollno%>
+                    </h2>
+                    <p class="sub-heading">Date: <%=date%>
+                    </p>
+                    <p class="sub-heading">Email Address: <%=email%>
+                    </p>
+                </div>
+                <div class="col-6">
+                    <h2 class="heading">Name: <%=studname%>
+                    </h2>
+                    <p class="sub-heading">Address: <%=studAdd%>
+                    </p>
+                    <p class="sub-heading">Phone Number:<%=studcellno%>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="body-section">
+            <h3 class="heading">MARKS SHEET</h3>
+            <br>
+            <table class="table-bordered">
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th class="w-20">Mark</th>
+                        <th class="w-20">Percenteg</th>
+                        <th class="w-20">Grade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+
+                        <% for (var re of result) { %>
+                            <td style="color: rgb(214, 78, 82);">
+                                <%=re.subject%>
+                            </td>
+                            <td>
+                                <%=re.mark%>
+                            </td>
+                            <td>
+                                <%=re.per%>
+                            </td>
+                            <td>
+                                <%=re.grade%>
+                            </td>
+
+                            <%}%>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="text-right">Total </td>
+                        <td>
+                            <%=total%>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="text-right">Practical Marks </td>
+                        <td>
+                            <%=practical%>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 25PX;" colspan="3" class="text-right">Grand Total</td>
+                        <td style="font-size: 25PX;">
+                            <%=grandtotal%>
+                        </td>
+
+                    </tr>
+                </tbody>
+
+            </table>
+            <br>
+            <h3 class="heading" align="CENTER">Student Status: <%=status%>
+            </h3>
+
+            <h3 class="heading" align="CENTER">Student Grade: <%=grade%>
+            </h3>
+
+
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>

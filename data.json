@@ -1,0 +1,31 @@
+{
+    "universityname":"VNSGU",
+    "address1":"ADD1",
+    "adress2":"ADD2",
+    "cellno":"0987654321",
+    "rollno":"12",
+    "date":"09-10-2022",
+    "email":"abc@gmail.com",
+    "studname":"Pankti",
+    "studAdd":"SURAT",
+    "studcellno":"1234567890",
+    "result":[
+        {
+            "subject":"Eng",
+            "mark":90,
+            "per":90,
+            "grade":"A"
+        },
+        {
+            "subject":"Guj",
+            "mark":90,
+            "per":90,
+            "grade":"A"
+        }
+    ],
+    "total":180,
+    "practical":48,
+    "grandtotal":100,
+    "status":"PASS",
+    "grade":"A"
+}

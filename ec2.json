@@ -1,0 +1,9 @@
+{
+    "AWSTemplateFormatVersion":"2010-09-09",
+    "Description":"AWS cloud formation sample template",
+    "Parameters":{},
+    "Conditions":{},
+    "Mappings":{},
+    "Resources":{},
+    "Outputs":{}
+}
